@@ -29,16 +29,33 @@ A Python command-line application for managing users, projects, and tasks. The a
 
 ## Project Structure
 
-```
-project_tracker/
+```text
+python-project-management-cli-tool/
 │
-├── main.py
-├── requirements.txt
-├── README.md
+├── main.py                  # CLI entry point
+├── requirements.txt         # Project dependencies
+├── README.md                # Project documentation
+│
 ├── models/
+│   ├── __init__.py
+│   ├── person.py            # Base Person class
+│   ├── user.py              # User model
+│   ├── project.py           # Project model
+│   └── task.py              # Task model
+│
 ├── utils/
+│   ├── __init__.py
+│   ├── storage.py           # JSON file handling
+│   └── helpers.py           # Utility functions
+│
 ├── data/
+│   └── database.json        # Persistent application data
+│
 └── tests/
+    ├── __init__.py
+    ├── test_user.py
+    ├── test_project.py
+    └── test_task.py
 ```
 
 ---
